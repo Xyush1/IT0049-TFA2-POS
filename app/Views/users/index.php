@@ -3,14 +3,14 @@
 <main class="container">
     <h1>User Accounts</h1>
 
-    <p>This page displays the user and staff records stored in a static PHP array.</p>
+    <p>This page displays the user and staff records retrieved from the MySQL database.</p>
 
     <table>
         <thead>
             <tr>
                 <th>Username</th>
                 <th>Full Name</th>
-                <th>Role</th>
+                <th>Date Created</th>
             </tr>
         </thead>
 
@@ -19,7 +19,7 @@
                 <tr>
                     <td><?= esc($user['username']) ?></td>
                     <td><?= esc($user['full_name']) ?></td>
-                    <td><?= esc($user['role']) ?></td>
+                    <td><?= esc($user['created_at']) ?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
